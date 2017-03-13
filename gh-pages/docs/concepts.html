@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700,500,100,800,600,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <title>Philosophy and Concepts | Appium</title>
+    <meta name="description" content="Automation for iOS, Android, and Windows Apps.">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mono-blue.css" type='text/css' />
+    <link rel="stylesheet" href="/css/hover-min.css" media="all">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://0.0.0.0:4000/docs/concepts.html">
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+
+  <body>
+
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="title">
+                    <img src="/img/logo-big.png" class="hidden-xs" alt="appium logo" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse navbar-appium navbar-right collapse">
+                <ul class="nav navbar-nav app-nav">
+                    
+
+                    <li class=""><a href="/docs/api-reference.html">API</a></li>
+                    <li class="active"><a href="/docs/getting-started.html">Docs</a></li>
+                    <li class=""><a href="/docs/support.html">Support</a></li>
+                    <li class=""><a href="/docs/install.html">Install</a></li>
+                    <li><a href="https://github.com/appium/appium/">Github</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+   <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+            <ul class="nav left-nav">
+                <li><a href="/docs/appium.html">Overview</a></li>
+                <li><a href="/docs/platform-support.html">Platform Support</a></li>
+                <li><a href="/docs/why-appium.html">Why Appium?</a></li>
+                <li><a href="/docs/concepts.html">Appium Concepts</a></li>
+                <li><a href="/docs/conduct.html">Code of Conduct</a></li>
+                <li><a href="/docs/api-reference.html"><strong>API Reference</strong></a></li>
+                <li><a href="/docs/contributing.html">Contribute</a></li>
+                <li><hr></li>
+                <li>
+                    <div class="supporters">
+                        <div class="saucelabs supporter">
+                            <a href="https://saucelabs.com">
+                                <img src="/img/sauce-logo.jpg" alt="Supported by Sauce Labs" title="Supported by Sauce Labs">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            
+            <div class="post-info">
+                <a href="https://github.com/imurchie/appium-docs/edit/master/docs/docs/concepts.md">
+                    <i class="fa fa-edit"></i>
+                    Edit on Github</a>
+                <br>
+                <i>Updated 13 Mar 2017</i>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Philosophy and Concepts</h1>
+  </header>
+
+  <article class="post-content">
+    <p>Appium was designed to meet mobile automation needs according to a philosophy outlined by the following four tenets:</p>
+
+<ol>
+  <li>You shouldn’t have to recompile your app or modify it in any way in order to automate it.</li>
+  <li>You shouldn’t be locked into a specific language or framework to write and run your tests.</li>
+  <li>A mobile automation framework shouldn’t reinvent the wheel when it comes to automation APIs.</li>
+  <li>A mobile automation framework should be open source, in spirit and practice as well as in name!</li>
+</ol>
+
+<h3 id="appium-design">Appium Design</h3>
+
+<p>So how does the structure of the Appium project live out this philosophy? We
+meet requirement #1 by using vendor-provided automation frameworks under the
+hood. That way, we don’t need to compile in any Appium-specific or
+third-party code or frameworks to your app. This means <strong>you’re testing the same app you’re shipping</strong>. The vendor-provided frameworks we use are:</p>
+
+<ul>
+  <li>iOS 9.3 and above: Apple’s <a href="https://developer.apple.com/reference/xctest">XCUITest</a></li>
+  <li>iOS 9.3 and lower: Apple’s <a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/">UIAutomation</a></li>
+  <li>Android 4.2+: Google’s <a href="http://developer.android.com/tools/help/uiautomator/index.html">UiAutomator</a></li>
+  <li>Android 2.3+: Google’s <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a>. (Instrumentation support is provided by bundling a separate project, <a href="http://selendroid.io">Selendroid</a>)</li>
+  <li>Windows: Microsoft’s <a href="http://github.com/microsoft/winappdriver">WinAppDriver</a></li>
+</ul>
+
+<p>We meet requirement #2 by wrapping the vendor-provided frameworks in one API,
+the <a href="http://docs.seleniumhq.org/projects/webdriver/">WebDriver</a> API.
+WebDriver (aka “Selenium WebDriver”) specifies a client-server protocol
+(known as the <a href="https://w3c.github.io/webdriver/webdriver-spec.html">JSON Wire Protocol</a>).
+Given this client-server architecture, a client written in any language can
+be used to send the appropriate HTTP requests to the server. There are
+already <a href="http://appium.io/downloads">clients written in every popular programming language</a>. This also
+means that you’re free to use whatever test runner and test framework you
+want; the client libraries are simply HTTP clients and can be mixed into your
+code any way you please. In other words, Appium &amp; WebDriver clients are not
+technically “test frameworks” – they are “automation libraries”. You can
+manage your test environment any way you like!</p>
+
+<p>We meet requirement #3 in the same way: WebDriver has become the de facto
+standard for automating web browsers, and is a <a href="https://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html">W3C Working Draft</a>.
+Why do something totally different for mobile? Instead we have <a href="https://github.com/SeleniumHQ/mobile-spec/blob/master/spec-draft.md">extended the protocol</a>
+with extra API methods useful for mobile automation.</p>
+
+<p>It should be obvious that requirement #4 is a given – you’re reading this
+because <a href="https://github.com/appium/appium">Appium is open source</a>.</p>
+
+<h3 id="appium-concepts">Appium Concepts</h3>
+
+<p><strong>Client/Server Architecture</strong><br />
+Appium is at its heart a webserver that exposes a REST API. It receives
+connections from a client, listens for commands, executes those commands on a
+mobile device, and responds with an HTTP response representing the result of
+the command execution. The fact that we have a client/server architecture
+opens up a lot of possibilities: we can write our test code in any language
+that has a http client API, but it is easier to use one of the <a href="http://appium.io/downloads">Appium client
+libraries</a>. We can put the server on a different machine than our
+tests are running on. We can write test code and rely on a cloud service
+like <a href="https://saucelabs.com/mobile">Sauce Labs</a> to receive and interpret the commands.</p>
+
+<p><strong>Session</strong><br />
+Automation is always performed in the context of a session. Clients initiate
+a session with a server in ways specific to each library,
+but they all end up sending a <code class="highlighter-rouge">POST /session</code> request to the server,
+with a JSON object called  the ‘desired capabilities’ object. At this point
+the server will start up the automation session and respond with a session ID
+which is used for sending further commands.</p>
+
+<p><strong>Desired Capabilities</strong><br />
+Desired capabilities are a set of keys and values (i.e.,
+a map or hash) sent to the Appium server to tell the server what kind of
+automation session we’re interested in starting up. There are also various
+capabilities which can modify the behavior of the server during automation.
+For example, we might set the <code class="highlighter-rouge">platformName</code> capability to <code class="highlighter-rouge">iOS</code> to tell
+Appium that we want an iOS session, rather than an Android or Windows one. Or we might
+set the <code class="highlighter-rouge">safariAllowPopups</code> capability to <code class="highlighter-rouge">true</code> in order to ensure that,
+during a Safari automation session, we’re allowed to use JavaScript to open
+up new windows. See the <a href="/docs/en/writing-running-appium/caps.md">capabilities doc</a> for the complete list of capabilities available for Appium.</p>
+
+<p><strong>Appium Server</strong><br />
+Appium is a server written in Node.js. It can be built and installed <a href="https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md">from source</a> or installed directly from NPM:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ npm install -g appium
+$ appium
+</code></pre>
+</div>
+
+<p><strong>Appium Clients</strong><br />
+There are client libraries (in Java, Ruby, Python, PHP, JavaScript, and C#)
+which support Appium’s extensions to the WebDriver protocol. When using Appium,
+you want to use these client libraries instead of your regular WebDriver
+client. You can view the full list of libraries <a href="appium-clients.md">here</a>.</p>
+
+<p><strong><a href="https://github.com/appium/appium-dot-app">Appium.app</a>, <a href="https://github.com/appium/appium-dot-exe">Appium.exe</a></strong><br />
+There exist GUI wrappers around the Appium server that can be downloaded.
+These come bundled with everything required to run the Appium server,
+so you don’t need to worry about Node. They also come with an Inspector,
+which enables you to check out the hierarchy of your app. This can come in handy when writing tests.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>Congratulations! You are now armed with enough knowledge to begin using Appium. Why not head to the <a href="https://github.com/appium/appium/blob/master/README.md">getting started doc</a> for more detailed requirements and instructions?</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46253177-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>

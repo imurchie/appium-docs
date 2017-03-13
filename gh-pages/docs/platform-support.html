@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700,500,100,800,600,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <title>Platform Support | Appium</title>
+    <meta name="description" content="Automation for iOS, Android, and Windows Apps.">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mono-blue.css" type='text/css' />
+    <link rel="stylesheet" href="/css/hover-min.css" media="all">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://0.0.0.0:4000/docs/platform-support.html">
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+
+  <body>
+
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="title">
+                    <img src="/img/logo-big.png" class="hidden-xs" alt="appium logo" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse navbar-appium navbar-right collapse">
+                <ul class="nav navbar-nav app-nav">
+                    
+
+                    <li class=""><a href="/docs/api-reference.html">API</a></li>
+                    <li class="active"><a href="/docs/getting-started.html">Docs</a></li>
+                    <li class=""><a href="/docs/support.html">Support</a></li>
+                    <li class=""><a href="/docs/install.html">Install</a></li>
+                    <li><a href="https://github.com/appium/appium/">Github</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+   <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+            <ul class="nav left-nav">
+                <li><a href="/docs/appium.html">Overview</a></li>
+                <li><a href="/docs/platform-support.html">Platform Support</a></li>
+                <li><a href="/docs/why-appium.html">Why Appium?</a></li>
+                <li><a href="/docs/concepts.html">Appium Concepts</a></li>
+                <li><a href="/docs/conduct.html">Code of Conduct</a></li>
+                <li><a href="/docs/api-reference.html"><strong>API Reference</strong></a></li>
+                <li><a href="/docs/contributing.html">Contribute</a></li>
+                <li><hr></li>
+                <li>
+                    <div class="supporters">
+                        <div class="saucelabs supporter">
+                            <a href="https://saucelabs.com">
+                                <img src="/img/sauce-logo.jpg" alt="Supported by Sauce Labs" title="Supported by Sauce Labs">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            
+            <div class="post-info">
+                <a href="https://github.com/imurchie/appium-docs/edit/master/docs/docs/platform-support.md">
+                    <i class="fa fa-edit"></i>
+                    Edit on Github</a>
+                <br>
+                <i>Updated 13 Mar 2017</i>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Platform Support</h1>
+  </header>
+
+  <article class="post-content">
+    <p>Appium supports a variety of platforms and testing modalities (native,
+hybrid, web, real devices, simulators, etc…). This document is designed to
+make explicit the level of support and requirements for each of these.</p>
+
+<h3 id="ios-support">iOS Support</h3>
+
+<p>See <a href="running-on-osx.md">Running on OS X: iOS</a> for iOS requirements and setup
+instructions.</p>
+
+<ul>
+  <li>Versions: 7.1 and up</li>
+  <li>Devices: iPhone Simulator, iPad Simulator, and real iPhones and iPads</li>
+  <li>Native app support: Yes, with debug version of .app (simulator),
+or correctly-signed .ipa (real devices). Underlying support is provided by
+Apple’s <a href="https://developer.apple.com/reference/xctest">XCUITest</a> (or <a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/">UIAutomation</a> for older versions)
+framework.</li>
+  <li>Mobile web support: Yes, via automation of mobile Safari. For real devices,
+<code class="highlighter-rouge">ios-webkit-remote-debugger</code> is required, and automation of native aspects of
+the Safari interface is not possible. See the <a href="/docs/en/writing-running-appium/mobile-web.md">mobile web doc</a> for instructions.</li>
+  <li>Hybrid support: Yes. For real devices, ios-webkit-remote-debugger is
+required. See the <a href="/docs/en/advanced-concepts/hybrid.md">hybrid doc</a> for instructions.</li>
+  <li>Support for automating multiple apps in one session: No</li>
+  <li>Support for automating multiple devices simultaneously: No</li>
+  <li>Support for automating vendor-provided or third-party apps: Only
+vendor-provided apps (Preferences, Maps, etc…), and only on the simulator. For iOS 10+, you can automate the home screen as well.</li>
+  <li>Support for automating custom, non-standard UI controls: Minimal. You need to
+set accessibility information on the control which enables some basic
+automation.</li>
+</ul>
+
+<h3 id="android-support">Android Support</h3>
+
+<p>See <a href="running-on-osx.md">Running on OS X: Android</a>,
+<a href="running-on-windows.md">Running on Windows</a>, or
+<a href="running-on-linux.md">Running on Linux</a> for Android requirements and setup
+instructions.</p>
+
+<ul>
+  <li>Versions: 2.3 and up
+    <ul>
+      <li>Versions 2.3 through 4.2 are supported via Appium’s bundled version of
+<a href="http://selendroid.io">Selendroid</a>, which utilizes <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a>. Selendroid has a different set of commands than the default Appium (though this is rapidly being minimized) and a different support profile. To access this automation backend, use the <code class="highlighter-rouge">automationName</code> capability with the value <code class="highlighter-rouge">Selendroid</code>.</li>
+      <li>Versions 4.2 and up are supported via Appium’s own <a href="http://developer.android.com/tools/testing-support-library/index.html#UIAutomator">UiAutomator</a>
+  libraries. This is the default automation backend.</li>
+    </ul>
+  </li>
+  <li>Devices: Android emulators and real Android devices</li>
+  <li>Native app support: Yes</li>
+  <li>Mobile web support: Yes (but not when using Selendroid backend). Automation
+is effected using a bundled <a href="https://code.google.com/p/selenium/wiki/ChromeDriver">Chromedriver</a>
+server as a proxy. With 4.2 and 4.3, automation works on official Chrome
+browser or Chromium only. With 4.4+, automation also works on the built-in
+“Browser” app. Chrome/Chromium/Browser must already be installed on the
+device under test. See the <a href="/docs/en/writing-running-appium/mobile-web.md">mobile web doc</a> for instructions.</li>
+  <li>Hybrid support: Yes. See the <a href="/docs/en/advanced-concepts/hybrid.md">hybrid doc</a> for instructions.
+    <ul>
+      <li>With default Appium automation backend: versions 4.4 and up</li>
+      <li>With Selendroid automation backend: versions 2.3 and up</li>
+    </ul>
+  </li>
+  <li>Support for automating multiple apps in one session: Yes (but not when
+using the Selendroid backend)</li>
+  <li>Support for automating multiple devices simultaneously: Yes,
+though Appium must be started using different ports for the server
+ parameters <code class="highlighter-rouge">--port</code>, <code class="highlighter-rouge">--bootstrap-port</code> (or <code class="highlighter-rouge">--selendroid-port</code>) and/or
+<code class="highlighter-rouge">--chromedriver-port</code>. See the <a href="/docs/en/writing-running-appium/server-args.md">server args doc</a> for more
+information on these parameters.</li>
+  <li>Support for automating vendor-provided or third-party apps: Yes (but not
+when using the Selendroid backend)</li>
+  <li>Support for automating custom, non-standard UI controls: No</li>
+</ul>
+
+<h3 id="windows-desktop-support">Windows Desktop Support</h3>
+
+<p>See these docs for details:</p>
+
+<ul>
+  <li><a href="running-on-windows.md">Running on Windows</a></li>
+  <li><a href="/docs/en/writing-running-appium/windows-app-testing.md">Windows App Testing</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46253177-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>

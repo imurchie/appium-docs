@@ -1,1 +1,32 @@
-theme: jekyll-theme-slate
+name: Appium
+description: Automation for iOS, Android, and Windows Apps.
+url: "http://appium.io"
+baseurl: ""
+title: Appium
+timezone: America/San_Francisco
+highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - helpers.rb
+  - README.md
+defaults:
+  - scope:
+      path: docs
+      type: pages
+    values:
+      layout: page
+markdown: kramdown
+version: 1.6.4
+gems:
+  - jekyll-redirect-from
+destination: gh-pages/
+keep_files:
+  - .git
+  - .gitignore
+  - logo.png
+  - CNAME
+  - coverage
+safe: false
+encoding: utf-8
+host: 0.0.0.0

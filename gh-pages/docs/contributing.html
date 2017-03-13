@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700,500,100,800,600,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <title>Contributing to Appium | Appium</title>
+    <meta name="description" content="Automation for iOS, Android, and Windows Apps.">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mono-blue.css" type='text/css' />
+    <link rel="stylesheet" href="/css/hover-min.css" media="all">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://0.0.0.0:4000/docs/contributing.html">
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+
+  <body>
+
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="title">
+                    <img src="/img/logo-big.png" class="hidden-xs" alt="appium logo" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse navbar-appium navbar-right collapse">
+                <ul class="nav navbar-nav app-nav">
+                    
+
+                    <li class=""><a href="/docs/api-reference.html">API</a></li>
+                    <li class="active"><a href="/docs/getting-started.html">Docs</a></li>
+                    <li class=""><a href="/docs/support.html">Support</a></li>
+                    <li class=""><a href="/docs/install.html">Install</a></li>
+                    <li><a href="https://github.com/appium/appium/">Github</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+   <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+            <ul class="nav left-nav">
+                <li><a href="/docs/appium.html">Overview</a></li>
+                <li><a href="/docs/platform-support.html">Platform Support</a></li>
+                <li><a href="/docs/why-appium.html">Why Appium?</a></li>
+                <li><a href="/docs/concepts.html">Appium Concepts</a></li>
+                <li><a href="/docs/conduct.html">Code of Conduct</a></li>
+                <li><a href="/docs/api-reference.html"><strong>API Reference</strong></a></li>
+                <li><a href="/docs/contributing.html">Contribute</a></li>
+                <li><hr></li>
+                <li>
+                    <div class="supporters">
+                        <div class="saucelabs supporter">
+                            <a href="https://saucelabs.com">
+                                <img src="/img/sauce-logo.jpg" alt="Supported by Sauce Labs" title="Supported by Sauce Labs">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            
+            <div class="post-info">
+                <a href="https://github.com/imurchie/appium-docs/edit/master/docs/docs/contributing.md">
+                    <i class="fa fa-edit"></i>
+                    Edit on Github</a>
+                <br>
+                <i>Updated 13 Mar 2017</i>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Contributing to Appium</h1>
+  </header>
+
+  <article class="post-content">
+    <p>There are a lot of different ways to contribute to Appium. See below for
+everything you can do and the processes to follow for each contribution method.
+Note that no matter how you contribute, your participation is governed by our
+<a href="CONDUCT.md">Code of Conduct</a>.</p>
+
+<h3 id="make-changes-to-the-appium-code-or-docs">Make changes to the Appium code or docs</h3>
+
+<p>Fork the project, make a change, and send a pull request! Please have a look at
+our <a href="/docs/en/contributing-to-appium/style-guide-2.0.md">Style Guide</a> before
+getting to work.  Please make sure the unit and functional tests pass before
+sending a pull request; for more information on how to run tests, keep reading!</p>
+
+<p>Make sure you read and follow the setup instructions in the README first. And note
+that all participation in the Appium community (including code submissions) is
+governed by our <a href="CONDUCT.md">Code of Conduct</a>. Then, have a look at our
+<a href="/docs/en/contributing-to-appium/appium-from-source.md">running from source doc</a> for more
+information on how to get set up to run tests and start slinging code.</p>
+
+<p>You will probably also want to have a look at this more in-depth <a href="/docs/en/contributing-to-appium/developers-overview.md">Developer’s
+Overview</a> of the Appium
+project, how Appium is architected, how to make changes to modules, and so on.</p>
+
+<p>Finally, before we accept your code, you will need to have signed our
+<a href="https://docs.google.com/forms/d/1lOfXRw_0VCk7gYzjj4WLetGu7yelDVo5LWh0z7pGftE/viewform">Contributor License
+Agreement</a>.</p>
+
+<h3 id="become-an-appium-triager">Become an Appium Triager</h3>
+
+<p>You can help us manage our issue tracker! All you need is enough familiarity
+with Appium to try and reproduce bugs. We triage issues by having conversations
+with the issue creator and then either closing the issue or moving it into the
+<a href="https://github.com/appium/appium/milestones/Bugs">Bugs</a> or
+<a href="https://github.com/appium/appium/milestones/Features">Features</a> milestone. We
+use these buckets as the backlogs for our upcoming releases.</p>
+
+<p>We use this “algorithm” for triaging issues, which anyone can jump in and follow:</p>
+
+<ol>
+  <li>If issue is a feature request, discuss amongst Appium devs.
+    <ul>
+      <li>If we decide to build it, add to the Features milestone.</li>
+      <li>If we decide not to build it, just close.</li>
+    </ul>
+  </li>
+  <li>If issue is a bug report, attempt to verify
+    <ul>
+      <li>If it’s a duplicate, close with link to bug already reported.</li>
+      <li>If it ultimately can’t be verified, close until we have enough information to verify (e.g., in most cases we need a full set of Appium logs to help diagnose an issue).</li>
+      <li>If the user hasn’t provided enough information, keep asking for enough information to verify.</li>
+      <li>If it’s a verified new bug, add it to the Bugs milestone.</li>
+      <li>If we have been waiting for a reply from the user for over 3 weeks, close.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>If you’re interested in joining our triage rotation, contact
+<a href="https://github.com/jlipps">@jlipps</a> or
+<a href="https://github.com/imurchie">@imurchie</a>.</p>
+
+<h3 id="help-out-on-our-forums">Help out on our forums</h3>
+
+<p>We can always use help on our forums at
+<a href="https://discuss.appium.io">discuss.appium.io</a>! Hop on over and see if there
+are any questions that you can answer.</p>
+
+<h3 id="submit-bug-reports-or-feature-requests">Submit bug reports or feature requests</h3>
+
+<p>Just use the GitHub issue tracker to submit your bug reports and feature
+requests. If you are submitting a bug report, please follow the <a href="https://github.com/appium/appium/issues/new">issue template</a>.</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46253177-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>
