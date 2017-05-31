@@ -1,7 +1,7 @@
 ---
 id: api-reference
 title: API Reference
-redirect_from: "/docs/api/index.html"
+redirect_from: "docs/api/index.html"
 ---
 
 

@@ -21,4 +21,4 @@ opens up the possibility of true cross-platform native mobile automation. Finall
 
 ### I don't get it yet...
 
-If you're new to Appium, or want a fuller description of what this is all about, please read our [Introduction to Appium Concepts](/docs/en/about-appium/intro.md).
+If you're new to Appium, or want a fuller description of what this is all about, please read our [Introduction to Appium Concepts](docs/en/about-appium/intro.md).

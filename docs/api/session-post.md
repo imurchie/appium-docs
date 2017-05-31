@@ -4,7 +4,7 @@ id: session-post
 title: Creating a session
 ---
 
-[← Back To API Reference](/docs/api-reference.html)
+[← Back To API Reference](docs/api-reference.html)
 ## Creating a new Session
 
 Creating a new session is done by sending a `POST` request to the `/session` endpoint. The server takes your [desired capabilities](desired-capabilities.html)

@@ -74,7 +74,7 @@ For example, we might set the `platformName` capability to `iOS` to tell
 Appium that we want an iOS session, rather than an Android or Windows one. Or we might
 set the `safariAllowPopups` capability to `true` in order to ensure that,
 during a Safari automation session, we're allowed to use JavaScript to open
-up new windows. See the [capabilities doc](/docs/en/writing-running-appium/caps.md) for the complete list of capabilities available for Appium.
+up new windows. See the [capabilities doc](docs/en/writing-running-appium/caps.md) for the complete list of capabilities available for Appium.
 
 **Appium Server**<br/>
 Appium is a server written in Node.js. It can be built and installed [from source](https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md) or installed directly from NPM:
